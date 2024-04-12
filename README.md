@@ -9,10 +9,10 @@ The following [Homebrew](https://brew.sh) [Formulae](https://docs.brew.sh/Formul
 
 To use this Homebrew tap, use the `tap` subcommand, specifying `atomvm/atomvm` as the [Tap](https://docs.brew.sh/Taps):
 
-    shell$ brew tap atomvm/atomvm
+    brew tap atomvm/atomvm
 
 You can then use the above [Formulae](https://docs.brew.sh/Formula-Cookbook) to install software on your machine, e.g.,
 
-    shell$ brew install atomvm
+    brew install atomvm
 
 Enjoy!
