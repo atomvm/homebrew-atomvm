@@ -17,8 +17,8 @@ class Packbeam < Formula
   depends_on "gzip" => :build
 
   def install
-    system "rebar3", "release"
-    system "rebar3", "tar"
+    system "rebar3", "as", "prod", "release"
+    system "rebar3", "as", "prod", "tar"
     system "./install.sh", "#{prefix}", "#{version}"
   end
 
