@@ -7,17 +7,17 @@
 class Atomvm < Formula
   desc "An Erlang VM for tiny systems"
   homepage "https://atomvm.net"
-  url "https://github.com/atomvm/AtomVM/archive/refs/tags/v0.6.0-alpha.1.tar.gz"
-  sha256 "9c539b21743eacb81e6b21b60eace03a265b307ddb42203f94734ce8cb4a0084"
+  url "https://github.com/atomvm/AtomVM/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "9ca20e2ff21b101a07d6bd3bec72742ba6d92ca4bf865482d3b68d0f89fdf54a"
   license "Apache License 2.0"
-  version "v0.6.0-alpha.1"
+  version "v0.6.0"
 
   depends_on "cmake" => :build
   depends_on "gperf" => :build
   depends_on "erlang" => :build
   depends_on "elixir" => :build
   depends_on "zlib"
-  depends_on "openssl@3"
+  depends_on "mbedtls"
 
   def install
     system "cmake", "-S", ".", "-B", "build", "-D", "AVM_BUILD_RUNTIME_ONLY=on", *std_cmake_args

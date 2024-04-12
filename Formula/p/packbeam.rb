@@ -7,18 +7,18 @@
 class Packbeam < Formula
   desc "A command-line utility for manipulating AtomVM PackBEAM files"
   homepage "https://atomvm.net"
-  url "https://github.com/atomvm/atomvm_packbeam/archive/refs/tags/0.7.0.tar.gz"
-  sha256 "eca0e8656987c973fb7292480bb96adbc7578772c83616e9cbc3753353e0aa15"
+  url "https://github.com/atomvm/atomvm_packbeam/archive/refs/tags/0.7.2.tar.gz"
+  sha256 "49f6d78d21e1c41b7512f76d4b2383494b0ecb0b06f1be013f64a2201f419e28"
   license "Apache License 2.0"
-  version "0.7.0"
+  version "0.7.2"
 
   depends_on "erlang" => :build
   depends_on "rebar3" => :build
   depends_on "gzip" => :build
 
   def install
-    system "rebar3", "release"
-    system "rebar3", "tar"
+    system "rebar3", "as", "prod", "release"
+    system "rebar3", "as", "prod", "tar"
     system "./install.sh", "#{prefix}", "#{version}"
   end
 
