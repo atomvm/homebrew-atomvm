@@ -7,10 +7,10 @@
 class Atomvm < Formula
   desc "An Erlang VM for tiny systems"
   homepage "https://atomvm.net"
-  url "https://github.com/atomvm/AtomVM/archive/refs/tags/v0.6.0.tar.gz"
-  sha256 "9ca20e2ff21b101a07d6bd3bec72742ba6d92ca4bf865482d3b68d0f89fdf54a"
+  url "https://github.com/atomvm/AtomVM/archive/refs/tags/v0.6.5.tar.gz"
+  sha256 "f1831eb3e05e07b1a0855f592de5e6e22e4e89acb72d7345b40a8db16eae7ea8"
   license "Apache License 2.0"
-  version "v0.6.0"
+  version "v0.6.5"
 
   depends_on "cmake" => :build
   depends_on "gperf" => :build
